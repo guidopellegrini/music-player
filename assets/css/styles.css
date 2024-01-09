@@ -130,12 +130,6 @@
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 1024px) {
-  :root {
-    font-size: 11px;
-  }
-}
-
 /*=============== BASE ===============*/
 * {
   margin: 0;
@@ -426,12 +420,11 @@ img {
 /*=============== MEDIA QUERIES ===============*/
 
 /* For small devices */
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 400px) {
 
   .wrapper {
     display: flex;
     flex-direction: column;
-
     border-radius: 0;
     min-width: 100vw;
     width: 100vw;
@@ -467,6 +460,8 @@ img {
 }
 
 /* For medium devices */
+
+@media screen and (min-width: 400px) and (max-width: 768px) {}
 
 
 /* For large devices */
