@@ -467,6 +467,11 @@ img {
     min-width: 90vw;
   }
 
+  img {
+    width: 11rem;
+    height: 11rem;
+  }
+
   .img-border {
     width: 12rem;
     height: 12rem;
