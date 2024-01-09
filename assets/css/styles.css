@@ -257,11 +257,8 @@ img {
   text-transform: capitalize;
 
   overflow: hidden;
-  /*Se oculta todo lo que sobresale de la caja*/
   text-overflow: ellipsis;
-  /*Crea el ... para indicar que el contenido se desborda*/
   white-space: nowrap;
-  /*Indica que el contenido no se debe ajustar dentro de la box*/
 }
 
 .artist {
@@ -473,8 +470,11 @@ img {
 
 @media screen and (min-width: 400px) and (max-width: 1200px) {
   .wrapper {
+    height: calc(var(--vh, 1vh) * 90);
     max-height: calc(var(--vh, 1vh) * 90);
     min-width: 90vw;
+    display: flex;
+    flex-direction: column;
   }
 
   img {
@@ -496,6 +496,11 @@ img {
 
   .player {
     margin-top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   .player__song {
