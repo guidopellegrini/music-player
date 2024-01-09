@@ -485,6 +485,41 @@ img {
   .img-border {
     width: 12rem;
     height: 12rem;
+    margin-bottom: 0;
+  }
+
+  .player__song {
+    display: grid;
+    grid-template-columns: 14rem max-content;
+    overflow: hidden;
+  }
+
+  .player {
+    margin-top: 0;
+  }
+
+  .player__song {
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .song-details {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .audioC {
+    margin-top: 0;
   }
 }
 
