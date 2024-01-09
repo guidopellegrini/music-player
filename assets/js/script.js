@@ -191,3 +191,13 @@ function updateProgressMobile(e) {
 }
 
 //-------------------------------------------------------------
+
+// Para fixear la diferencia de altura de pantalla en mobile
+// cuando se abre/cierra el menu del navegador (en iOS/Android)
+const appHeight = () => {
+  const vh = window.innerHeight * 0.01;
+  this.document.documentElement.style.setProperty("--vh", `${vh}px`);
+};
+window.addEventListener("resize", appHeight);
+
+appHeight();
