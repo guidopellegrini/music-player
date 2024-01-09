@@ -123,10 +123,10 @@
 /*=============== MEDIA QUERIES ===============*/
 @media screen and (max-width: 362px) {
   :root {
-    --big-font-size: 1.2rem;
+    --big-font-size: 1.5rem;
     --h2-font-size: 1rem;
-    --normal-font-size: .8rem;
-    --small-font-size: 0.6rem;
+    --normal-font-size: 1.2rem;
+    --small-font-size: 1rem;
   }
 }
 
@@ -145,7 +145,6 @@ body {
   display: grid;
   place-content: center;
   overflow: hidden;
-
   min-height: calc(var(--vh, 1vh) * 100);
 }
 
@@ -462,7 +461,17 @@ img {
 
 /* For medium devices */
 
-@media screen and (min-width: 400px) and (max-width: 768px) {}
+@media screen and (min-width: 400px) and (max-width: 900px) {
+  .wrapper {
+    max-height: calc(var(--vh, 1vh) * 90);
+    min-width: 90vw;
+  }
+
+  .img-border {
+    width: 12rem;
+    height: 12rem;
+  }
+}
 
 
 /* For large devices */
