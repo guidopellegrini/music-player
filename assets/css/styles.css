@@ -458,6 +458,10 @@ img {
   .audioC {
     margin-inline: 1rem;
   }
+
+  .controls {
+    margin-bottom: 3rem;
+  }
 }
 
 /* For medium devices */
