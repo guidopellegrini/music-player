@@ -175,8 +175,6 @@ document.addEventListener("touchmove", function (e) {
 
 document.addEventListener("touchend", function () {
   isDragging = false;
-
-  playMusic();
 });
 
 function updateProgressMobile(e) {
@@ -188,6 +186,8 @@ function updateProgressMobile(e) {
     progressBar.style.width = progressPercentage + "%";
     audio.currentTime = (progressPercentage / 100) * audio.duration;
   }
+
+  playMusic();
 }
 
 //-------------------------------------------------------------
