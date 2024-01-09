@@ -10,12 +10,16 @@
   --image-border-bg: linear-gradient(to bottom right, hsl(207, 10%, 17%), hsl(240, 2%, 8%));
   --wrapper-border-bg: linear-gradient(to bottom, hsl(216, 10%, 29%), hsl(210, 19%, 27%));
   --list-hover-bg: linear-gradient(143deg, hsla(225, 10%, 8%, 0.433), #47464b26);
+
+  /*========== Backgrounds ==========*/
   --bg01: hsl(216, 9%, 10%);
-  --bg02: linear-gradient(135deg, var(--box-shadow-color09), var(--box-shadow-color04));
-  --bg03: linear-gradient(135deg, var(--box-shadow-color09), var(--box-shadow-color04));
+  --bg02: linear-gradient(135deg, var(--alt-color09), var(--alt-color04));
+  --bg03: linear-gradient(135deg, var(--alt-color09), var(--alt-color04));
   --bg04: hsl(0, 0%, 2%);
   --bg05: hsl(20, 91%, 46%);
   --bg06: hsl(6, 84%, 41%);
+
+  /*========== Text ==========*/
   --text-color-light: hsl(210, 2%, 66%);
   --text-color: hsl(210, 3%, 54%);
   --text-color-dark: hsl(225, 2%, 49%);
@@ -27,58 +31,57 @@
   --border03: hsl(6, 84%, 40%);
   --border04: hsl(20, 91%, 47%);
 
+  /*========== Alternative ==========*/
+  --alt-color01: hsl(204, 7%, 14%);
+  --alt-color02: hsl(212, 9%, 27%);
+  --alt-color03: hsl(225, 7%, 22%);
+  --alt-color04: hsl(220, 9%, 13%);
+  --alt-color05: hsl(240, 2%, 10%);
+  --alt-color06: hsl(210, 12%, 16%);
+  --alt-color07: hsl(240, 2%, 9%);
+  --alt-color08: hsl(220, 7%, 9%);
+  --alt-color09: hsl(210, 10%, 19%);
+
   /*========== Box Shadow ==========*/
-
-  --box-shadow-color01: hsl(204, 7%, 14%);
-  --box-shadow-color02: hsl(212, 9%, 27%);
-  --box-shadow-color03: hsl(225, 7%, 22%);
-  --box-shadow-color04: hsl(220, 9%, 13%);
-  --box-shadow-color05: hsl(240, 2%, 10%);
-  --box-shadow-color06: hsl(210, 12%, 16%);
-  --box-shadow-color07: hsl(240, 2%, 9%);
-  --box-shadow-color08: hsl(220, 7%, 9%);
-  --box-shadow-color09: hsl(210, 10%, 19%);
-
   --box-shadow01:
-    6px 6px 10px var(--box-shadow-color01),
-    -6px -6px 10px var(--box-shadow-color02),
-    inset 2px 2px 6px var(--box-shadow-color03),
-    inset -3px -3px 6px var(--box-shadow-color04);
+    6px 6px 10px var(--alt-color01),
+    -6px -6px 10px var(--alt-color02),
+    inset 2px 2px 6px var(--alt-color03),
+    inset -3px -3px 6px var(--alt-color04);
 
   --box-shadow02:
-    6px 6px 10px var(--box-shadow-color01),
-    -6px -6px 10px var(--box-shadow-color02),
-    inset -4px -4px 8px var(--box-shadow-color03),
-    inset 4px 4px 8px var(--box-shadow-color04);
+    6px 6px 10px var(--alt-color01),
+    -6px -6px 10px var(--alt-color02),
+    inset -4px -4px 8px var(--alt-color03),
+    inset 4px 4px 8px var(--alt-color04);
 
   --box-shadow03:
-    10px 10px 20px var(--box-shadow-color05),
-    -10px -10px 20px var(--box-shadow-color02);
+    10px 10px 20px var(--alt-color05),
+    -10px -10px 20px var(--alt-color02);
 
   --box-shadow04:
     inset 2px 2px 3px -2px hsla(210, 2%, 66%, 0.322),
     inset 0px -1px 1px 0px hsl(210, 3%, 30%);
 
   --box-shadow05:
-    8px 8px 12px var(--box-shadow-color08),
-    -2px -2px 10px var(--box-shadow-color09),
-    inset 2px 2px 3px var(--box-shadow-color03),
-    inset -2px -2px 3px var(--box-shadow-color08);
+    8px 8px 12px var(--alt-color08),
+    -2px -2px 10px var(--alt-color09),
+    inset 2px 2px 3px var(--alt-color03),
+    inset -2px -2px 3px var(--alt-color08);
 
   --box-shadow06:
-    10px 10px 12px var(--box-shadow-color07),
-    -10px -10px 12px var(--box-shadow-color06),
-    inset 4px 4px 8px var(--box-shadow-color03),
-    inset -4px -4px 8px var(--box-shadow-color04);
+    10px 10px 12px var(--alt-color07),
+    -10px -10px 12px var(--alt-color06),
+    inset 4px 4px 8px var(--alt-color03),
+    inset -4px -4px 8px var(--alt-color04);
 
   --box-shadow07:
-    10px 10px 12px var(--box-shadow-color07),
-    -10px -10px 12px var(--box-shadow-color06),
-    inset -4px -4px 8px var(--box-shadow-color03),
-    inset 4px 4px 8px var(--box-shadow-color04);
+    10px 10px 12px var(--alt-color07),
+    -10px -10px 12px var(--alt-color06),
+    inset -4px -4px 8px var(--alt-color03),
+    inset 4px 4px 8px var(--alt-color04);
 
   /*========== Font and typography ==========*/
-
   --body-font: "Lato", sans-serif;
   --biggest-font-size: 5rem;
   /* 80px */
@@ -136,7 +139,7 @@
   --font-semi-bold: 600;
 }
 
-/*=============== MEDIA QUERIES ===============*/
+/*=============== MEDIA QUERIES TYPOGRAPHY ===============*/
 @media screen and (max-width: 362px) {
   :root {
     --big-font-size: 1.5rem;
@@ -411,16 +414,16 @@ img {
   border: 3px solid var(--border03);
   background: linear-gradient(135deg, var(--border03), var(--border04));
   box-shadow:
-    10px 10px 12px var(--box-shadow-color08),
-    -10px -10px 12px var(--box-shadow-color09),
+    10px 10px 12px var(--alt-color08),
+    -10px -10px 12px var(--alt-color09),
     inset 4px 4px 8px var(--border04),
     inset -4px -4px 8px var(--border03);
 }
 
 .play-pause:active {
   box-shadow:
-    10px 10px 12px var(--box-shadow-color08),
-    -10px -10px 12px var(--box-shadow-color09),
+    10px 10px 12px var(--alt-color08),
+    -10px -10px 12px var(--alt-color09),
     inset -10px 10px 12px var(--border04),
     inset 10px 10px 8px var(--border03);
 }
@@ -631,79 +634,76 @@ button {
 
 :root {
   .light-theme {
-    /*========== Colors ==========*/
     --body-color: #D3E1F7;
     --player-color: linear-gradient(180deg, #DFE9FD 0%, #ECF4FD 100%);
     --image-border-bg: linear-gradient(to bottom right, #E4EDFE, #B9C7D8);
     --wrapper-border-bg: linear-gradient(to bottom, #E6EEFD, #DAE6F3);
-    --bg02: linear-gradient(135deg, var(--box-shadow-color09), var(--box-shadow-color04));
-    --bg03: linear-gradient(135deg, var(--box-shadow-color09), var(--box-shadow-color04));
     --list-hover-bg: linear-gradient(143deg, hsla(0, 0%, 100%, 0.53), #9ba4bd24);
+
     --bg01: #ECF4FD;
+    --bg02: linear-gradient(135deg, var(--alt-color09), var(--alt-color04));
+    --bg03: linear-gradient(135deg, var(--alt-color09), var(--alt-color04));
     --bg04: #E4EDFA;
     --bg05: rgb(180, 200, 234);
     --bg06: #779DFF;
+
     --text-color-light: #6C7A92;
     --text-color: #A3B2CB;
     --text-color-dark: #9FAEC3;
     --text-color-white: hsl(0, 0%, 100%);
 
-    /*========== Borders ==========*/
     --border01: #DAE3F1;
     --border02: #DAE2F0;
     --border03: #738EF5;
     --border04: #547CFF;
 
-    /*========== Box Shadow ==========*/
-
-    --box-shadow-color01: #B6C5DC;
-    --box-shadow-color02: #F5FEFF;
-    --box-shadow-color03: #EDF9FF;
-    --box-shadow-color04: #DEE7F5;
-    --box-shadow-color05: #F1FBFF;
-    --box-shadow-color06: #F1FBFF;
-    --box-shadow-color07: #C7D4E7;
-    --box-shadow-color08: #C7D4E7;
-    --box-shadow-color09: #EDF9FF;
-
+    --alt-color01: #B6C5DC;
+    --alt-color02: #F5FEFF;
+    --alt-color03: #EDF9FF;
+    --alt-color04: #DEE7F5;
+    --alt-color05: #F1FBFF;
+    --alt-color06: #F1FBFF;
+    --alt-color07: #C7D4E7;
+    --alt-color08: #C7D4E7;
+    --alt-color09: #EDF9FF;
 
     --box-shadow01:
-      6px 6px 10px var(--box-shadow-color01),
-      -6px -6px 10px var(--box-shadow-color02),
-      inset 2px 2px 6px var(--box-shadow-color03),
-      inset -3px -3px 6px var(--box-shadow-color04);
+      6px 6px 10px var(--alt-color01),
+      -6px -6px 10px var(--alt-color02),
+      inset 2px 2px 6px var(--alt-color03),
+      inset -3px -3px 6px var(--alt-color04);
 
     --box-shadow02:
-      6px 6px 10px var(--box-shadow-color01),
-      -6px -6px 10px var(--box-shadow-color02),
-      inset -4px -4px 8px var(--box-shadow-color03),
-      inset 4px 4px 8px var(--box-shadow-color04);
+      6px 6px 10px var(--alt-color01),
+      -6px -6px 10px var(--alt-color02),
+      inset -4px -4px 8px var(--alt-color03),
+      inset 4px 4px 8px var(--alt-color04);
 
     --box-shadow03:
-      10px 10px 20px var(--box-shadow-color05),
-      -10px -10px 20px var(--box-shadow-color02);
+      10px 10px 20px var(--alt-color05),
+      -10px -10px 20px var(--alt-color02);
 
     --box-shadow04:
       inset 7px 5px 3px -2px hsl(210deg 49.37% 84.31% / 66%),
       inset 0px -1px 1px 0px hsl(210deg 32.08% 78.66%);
 
     --box-shadow05:
-      8px 8px 12px var(--box-shadow-color08),
-      -2px -2px 10px var(--box-shadow-color09),
-      inset 2px 2px 3px var(--box-shadow-color03),
-      inset -2px -2px 3px var(--box-shadow-color08);
+      8px 8px 12px var(--alt-color08),
+      -2px -2px 10px var(--alt-color09),
+      inset 2px 2px 3px var(--alt-color03),
+      inset -2px -2px 3px var(--alt-color08);
 
     --box-shadow06:
-      10px 10px 12px var(--box-shadow-color07),
-      -10px -10px 12px var(--box-shadow-color06),
-      inset 4px 4px 8px var(--box-shadow-color03),
-      inset -4px -4px 8px var(--box-shadow-color04);
+      10px 10px 12px var(--alt-color07),
+      -10px -10px 12px var(--alt-color06),
+      inset 4px 4px 8px var(--alt-color03),
+      inset -4px -4px 8px var(--alt-color04);
 
     --box-shadow07:
-      10px 10px 12px var(--box-shadow-color07),
-      -10px -10px 12px var(--box-shadow-color06),
-      inset -4px -4px 8px var(--box-shadow-color03),
-      inset 4px 4px 8px var(--box-shadow-color04);
+      10px 10px 12px var(--alt-color07),
+      -10px -10px 12px var(--alt-color06),
+      inset -4px -4px 8px var(--alt-color03),
+      inset 4px 4px 8px var(--alt-color04);
 
   }
 }
