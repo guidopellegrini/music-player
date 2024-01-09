@@ -1,0 +1,474 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+
+  /*========== Colors ==========*/
+  --body-color: #26282B;
+  --player-color: linear-gradient(180deg, #34393F 0%, #181a1d 100%);
+  --bg02: linear-gradient(135deg, #2c3136, #1d1f23);
+  --bg03: linear-gradient(135deg, #2f3439, #1d1f23);
+  --bg04: #040404;
+  --bg05: #e1530a;
+
+  --text-color-light: #a7a9ab;
+  --text-color: #86898c;
+  --text-color-dark: #7C7D80;
+  --text-color-white: #fff;
+
+  /*========== Borders ==========*/
+  --border01: #292E34;
+  --border02: #1a1d21;
+  --border03: #bd2210;
+
+  /*========== Box Shadow ==========*/
+  --box-shadow01:
+    6px 6px 10px #202325,
+    -6px -6px 10px #3E444B,
+    inset 2px 2px 6px #33353B,
+    inset -3px -3px 6px #1D1F23;
+
+  --box-shadow02:
+    6px 6px 10px #202325,
+    -6px -6px 10px #3E444B,
+    inset -4px -4px 8px #33353B,
+    inset 4px 4px 8px #1D1F23;
+
+  --box-shadow03:
+    10px 10px 20px #181819,
+    -10px -10px 20px #3E444B;
+
+  --box-shadow04:
+    inset 2px 2px 3px -2px rgba(167, 169, 171, 0.322),
+    inset 0px -1px 1px 0px #4a4c4e;
+
+  --box-shadow05:
+    8px 8px 12px #151618,
+    -2px -2px 10px #2c3136,
+    inset 2px 2px 3px #33353B,
+    inset -2px -2px 3px #151618;
+
+  --box-shadow06:
+    10px 10px 12px #171718,
+    -10px -10px 12px #252A2F,
+    inset 4px 4px 8px #33353B,
+    inset -4px -4px 8px#1D1F23;
+
+  --box-shadow07:
+    10px 10px 12px #171718,
+    -10px -10px 12px #252A2F,
+    inset -4px -4px 8px #33353B,
+    inset 4px 4px 8px #1D1F23;
+
+  /*========== Font and typography ==========*/
+
+  --body-font: "Lato", sans-serif;
+  --biggest-font-size: 5rem;
+  /* 80px */
+  --bigger-font-size: 3.5rem;
+  /* 56px */
+  --big-font-size: 1.5rem;
+  /* 24px */
+  --h2-font-size: 1.25rem;
+  /* 20px */
+  --h3-font-size: 1.125rem;
+  /* 18px */
+  --normal-font-size: 0.938rem;
+  /* 15px */
+  --small-font-size: 0.813rem;
+  /* 13px */
+  --smaller-font-size: 0.75rem;
+  /* 12px */
+  --text-line-height: 2rem;
+  /* 32px */
+
+  /*========== Margenes ==========*/
+  --m-0-5: 0.5rem;
+  /* 8px */
+  --m-0-75: 0.75rem;
+  /* 12px */
+  --m-1: 1rem;
+  /* 16px */
+  --m-1-5: 1.5rem;
+  /* 24px */
+  --m-2: 2rem;
+  /* 32px */
+  --m-2-5: 2.5rem;
+  /* 40px */
+  --m-3: 3rem;
+  /* 48px */
+  --m-3-5: 3.5rem;
+  /* 56px */
+
+  /*========== Padding ==========*/
+  --p-0-5: 0.5rem;
+  /* 8px */
+  --p-0-75: 0.75rem;
+  /* 12px */
+  --p-1: 1rem;
+  /* 16px */
+  --p-1-5: 1.5rem;
+  /* 24px */
+  --p-2: 2rem;
+  /* 32px */
+  --p-2-5: 2.5rem;
+  /* 40px */
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
+/*=============== MEDIA QUERIES ===============*/
+@media screen and (max-width: 362px) {
+  :root {
+    --big-font-size: 1.2rem;
+    --h2-font-size: 1rem;
+    --normal-font-size: .8rem;
+    --small-font-size: 0.6rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  :root {
+    font-size: 11px;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--body-font);
+  color: var(--text-color);
+}
+
+body {
+  background: var(--body-color);
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+}
+
+i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.flex-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+/*=============== WRAPPER ===============*/
+.wrapper {
+  min-width: 350px;
+  max-width: 350px;
+  text-align: center;
+  padding: var(--p-2);
+  overflow: hidden;
+  background: var(--player-color);
+  border-radius: 3rem;
+}
+
+.wrapper-border {
+  position: relative;
+  background: linear-gradient(to bottom, #434952, #24272a);
+  padding: 2px;
+  border-radius: 3.2rem;
+  display: grid;
+  place-content: center;
+  box-shadow: var(--box-shadow06);
+}
+
+/*=============== HEADER ===============*/
+.header .hdbtn {
+  background: var(--bg02);
+  border: 2px solid var(--border01);
+  box-shadow: var(--box-shadow01);
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: var(--h2-font-size);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  line-height: 3.5rem;
+}
+
+.hdbtn:active {
+  box-shadow: var(--box-shadow02);
+}
+
+.hdbtn:active i {
+  transform: scale(0.90);
+  transition: all 0.2s ease;
+}
+
+.hdbtn i {
+  transition: all 0.2s ease;
+}
+
+.header h3 {
+  text-transform: uppercase;
+  font-size: var(--small-font-size);
+}
+
+/*=============== PLAYER ===============*/
+.player {
+  margin-top: var(--m-2);
+}
+
+/*=============== IMG AREA ===============*/
+
+.img-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.img-border {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  position: relative;
+  background: linear-gradient(to bottom right, #272c30, #141415);
+  margin-bottom: var(--m-2-5);
+  padding: 5px;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  box-shadow: var(--box-shadow03);
+}
+
+/*=============== SONG DETAILS ===============*/
+
+.name {
+  color: var(--text-color-light);
+  font-size: var(--big-font-size);
+  text-transform: capitalize;
+
+  overflow: hidden;
+  /*Se oculta todo lo que sobresale de la caja*/
+  text-overflow: ellipsis;
+  /*Crea el ... para indicar que el contenido se desborda*/
+  white-space: nowrap;
+  /*Indica que el contenido no se debe ajustar dentro de la box*/
+}
+
+.artist {
+  color: var(--text-color-dark);
+  font-size: var(--normal-font-size);
+  text-transform: capitalize;
+  padding: var(--p-0-75) 0 0 0;
+}
+
+/*=============== AUDIO C ===============*/
+.audioC {
+  margin-top: var(--m-2);
+}
+
+.song-timer {
+  margin-bottom: var(--m-1-5);
+}
+
+.song-timer span {
+  font-size: var(--small-font-size);
+  color: var(--text-color-dark);
+  font-weight: var(--font-medium);
+}
+
+.progress-area {
+  height: 7px;
+  width: 100%;
+  display: flex;
+  margin-top: var(--m-1);
+  align-items: center;
+  border-radius: 50px;
+  background: var(--bg04);
+  box-shadow: var(--box-shadow04);
+  cursor: pointer;
+  position: relative;
+}
+
+.progress-area::before {
+  content: "";
+  padding-inline: 20px;
+  position: absolute;
+  height: 30px;
+  border-radius: inherit;
+  z-index: 2;
+  inset: 0 -15px 0 -15px;
+  margin: auto;
+}
+
+.progress-bar {
+  height: inherit;
+  width: 0%;
+  position: relative;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #bf2311 0%, #e1530a 80%);
+}
+
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  background: var(--bg02);
+  box-shadow: var(--box-shadow05);
+  border-radius: 50%;
+  top: 50%;
+  right: -14px;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  outline: none;
+  border: none;
+  pointer-events: none;
+  transform: translate(0, -50%);
+  transition: all 0.2s ease;
+}
+
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  background: var(--bg05);
+  border-radius: 50%;
+  top: 50%;
+  right: -4px;
+  z-index: 2;
+  width: 8px;
+  height: 8px;
+  outline: none;
+  border: none;
+  pointer-events: none;
+  transform: translate(0, -50%);
+  transition: all 0.2s ease;
+}
+
+/*=============== CONTROLS ===============*/
+
+.controls {
+  margin: var(--m-3-5) var(--m-0-5) var(--m-0-5) var(--m-0-5);
+}
+
+.btnC {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: var(--bg03);
+  box-shadow: var(--box-shadow06);
+  border: 3px solid var(--border02);
+  transition: all 0.2s ease;
+}
+
+.btnC:active i {
+  transform: scale(0.90);
+  transition: all 0.2s ease;
+}
+
+.btnC:active {
+  box-shadow: var(--box-shadow07);
+}
+
+.controls i {
+  font-size: var(--h2-font-size);
+  color: var(--text-color-light);
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.controls .play-pause {
+  width: 5rem;
+  height: 5rem;
+}
+
+.play-pause i {
+  color: var(--text-color-white);
+}
+
+.play-pause {
+  border: 3px solid var(--border03);
+  background: linear-gradient(135deg, #bd2210, #e5550b);
+  box-shadow:
+    10px 10px 12px #151618,
+    -10px -10px 12px #2c3136,
+    inset 4px 4px 8px #e5550b,
+    inset -4px -4px 8px #bd2210;
+}
+
+.play-pause:active {
+  box-shadow:
+    10px 10px 12px #151618,
+    -10px -10px 12px #2c3136,
+    inset -10px 10px 12px #e5550b,
+    inset 10px 10px 8px #bd2210;
+}
+
+
+img {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/*=============== MEDIA QUERIES ===============*/
+
+/* For small devices */
+@media screen and (max-width: 340px) {
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 0;
+    min-width: 100vw;
+    width: 100vw;
+    min-height: 100vh;
+    height: 100vh;
+    padding: var(--p-1)
+  }
+
+  .wrapper-border {
+    border-radius: 0;
+  }
+
+  .player {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+
+  .img-border {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .btnC {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .audioC {
+    margin-inline: 1rem;
+  }
+}
+
+/* For medium devices */
+
+
+/* For large devices */
+
+/*=============== THEMES ===============*/
