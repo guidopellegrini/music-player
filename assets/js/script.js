@@ -191,7 +191,6 @@ function updateProgressMobile(e) {
 }
 
 //-------------------------------------------------------------
-
 // Para fixear la diferencia de altura de pantalla en mobile
 // cuando se abre/cierra el menu del navegador (en iOS/Android)
 const appHeight = () => {
@@ -201,3 +200,54 @@ const appHeight = () => {
 window.addEventListener("resize", appHeight);
 
 appHeight();
+
+//-------------------------------------------------------------
+//Theme Toggler
+function changeTheme() {
+  const themeButton = document.getElementById("theme-button");
+  const themeIcon = document.getElementById("theme-button__icon");
+  const lightTheme = "light-theme";
+  const iconTheme = "fi-sr-sun";
+
+  // Obtenemos el tema actual del storage
+  const selectedTheme = localStorage.getItem("selected-theme");
+  const selectedIcon = localStorage.getItem("selected-icon");
+
+  // Obtenemos el tema actual que tiene la interfaz validando la clase dark-theme
+  const getCurrentTheme = () => (document.body.classList.contains(lightTheme) ? "light-theme" : "dark-theme");
+  const getCurrentIcon = () => (themeIcon.classList.contains(iconTheme) ? "fi-sr-sun" : "fi-sr-moon");
+
+  // Validamos si el usuario eligió un tema previamente
+  if (selectedTheme) {
+    // Si se cumple la validación, preguntamos cuál fue el problema para saber si activamos o desactivamos el dark theme
+    document.body.classList[selectedTheme === "light-theme" ? "add" : "remove"](lightTheme);
+
+    if (selectedTheme === "light-theme") {
+      themeIcon.classList.remove("fi-sr-moon");
+      themeIcon.classList.add("fi-sr-sun");
+    } else {
+      themeIcon.classList.remove("fi-sr-sun");
+      themeIcon.classList.add("fi-sr-moon");
+    }
+  }
+
+  // Activamos / desactivamos el tema manualmente con el botón
+  themeButton.addEventListener("click", () => {
+    // Agregamos o quitamos el dark / icon theme
+    document.body.classList.toggle(lightTheme);
+
+    if (themeIcon.classList.contains("fi-sr-moon")) {
+      themeIcon.classList.remove("fi-sr-moon");
+      themeIcon.classList.add("fi-sr-sun");
+    } else {
+      themeIcon.classList.remove("fi-sr-sun");
+      themeIcon.classList.add("fi-sr-moon");
+    }
+
+    // Guardamos el tema y el icono actual que eligió el usuario
+    localStorage.setItem("selected-theme", getCurrentTheme());
+    localStorage.setItem("selected-icon", getCurrentIcon());
+  });
+}
+
+changeTheme();

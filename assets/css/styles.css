@@ -5,61 +5,75 @@
 :root {
 
   /*========== Colors ==========*/
-  --body-color: #26282B;
-  --player-color: linear-gradient(180deg, #34393F 0%, #181a1d 100%);
-  --bg02: linear-gradient(135deg, #2c3136, #1d1f23);
-  --bg03: linear-gradient(135deg, #2f3439, #1d1f23);
-  --bg04: #040404;
-  --bg05: #e1530a;
-
-  --text-color-light: #a7a9ab;
-  --text-color: #86898c;
-  --text-color-dark: #7C7D80;
-  --text-color-white: #fff;
+  --body-color: hsl(216deg 6.17% 15.88%);
+  --player-color: linear-gradient(180deg, hsl(213, 10%, 23%) 0%, hsl(216, 9%, 10%) 100%);
+  --image-border-bg: linear-gradient(to bottom right, hsl(207, 10%, 17%), hsl(240, 2%, 8%));
+  --wrapper-border-bg: linear-gradient(to bottom, hsl(216, 10%, 29%), hsl(210, 8%, 15%));
+  --bg02: linear-gradient(135deg, var(--box-shadow-color09), var(--box-shadow-color04));
+  --bg03: linear-gradient(135deg, var(--box-shadow-color09), var(--box-shadow-color04));
+  --bg04: hsl(0, 0%, 2%);
+  --bg05: hsl(20, 91%, 46%);
+  --bg06: hsl(6, 84%, 41%);
+  --text-color-light: hsl(210, 2%, 66%);
+  --text-color: hsl(210, 3%, 54%);
+  --text-color-dark: hsl(225, 2%, 49%);
+  --text-color-white: hsl(0, 0%, 100%);
 
   /*========== Borders ==========*/
-  --border01: #292E34;
-  --border02: #1a1d21;
-  --border03: #bd2210;
+  --border01: hsl(213, 12%, 18%);
+  --border02: hsl(214, 12%, 12%);
+  --border03: hsl(6, 84%, 40%);
+  --border04: hsl(20, 91%, 47%);
 
   /*========== Box Shadow ==========*/
+
+  --box-shadow-color01: hsl(204, 7%, 14%);
+  --box-shadow-color02: hsl(212, 9%, 27%);
+  --box-shadow-color03: hsl(225, 7%, 22%);
+  --box-shadow-color04: hsl(220, 9%, 13%);
+  --box-shadow-color05: hsl(240, 2%, 10%);
+  --box-shadow-color06: hsl(210, 12%, 16%);
+  --box-shadow-color07: hsl(240, 2%, 9%);
+  --box-shadow-color08: hsl(220, 7%, 9%);
+  --box-shadow-color09: hsl(210, 10%, 19%);
+
   --box-shadow01:
-    6px 6px 10px #202325,
-    -6px -6px 10px #3E444B,
-    inset 2px 2px 6px #33353B,
-    inset -3px -3px 6px #1D1F23;
+    6px 6px 10px var(--box-shadow-color01),
+    -6px -6px 10px var(--box-shadow-color02),
+    inset 2px 2px 6px var(--box-shadow-color03),
+    inset -3px -3px 6px var(--box-shadow-color04);
 
   --box-shadow02:
-    6px 6px 10px #202325,
-    -6px -6px 10px #3E444B,
-    inset -4px -4px 8px #33353B,
-    inset 4px 4px 8px #1D1F23;
+    6px 6px 10px var(--box-shadow-color01),
+    -6px -6px 10px var(--box-shadow-color02),
+    inset -4px -4px 8px var(--box-shadow-color03),
+    inset 4px 4px 8px var(--box-shadow-color04);
 
   --box-shadow03:
-    10px 10px 20px #181819,
-    -10px -10px 20px #3E444B;
+    10px 10px 20px var(--box-shadow-color05),
+    -10px -10px 20px var(--box-shadow-color02);
 
   --box-shadow04:
-    inset 2px 2px 3px -2px rgba(167, 169, 171, 0.322),
-    inset 0px -1px 1px 0px #4a4c4e;
+    inset 2px 2px 3px -2px hsla(210, 2%, 66%, 0.322),
+    inset 0px -1px 1px 0px hsl(210, 3%, 30%);
 
   --box-shadow05:
-    8px 8px 12px #151618,
-    -2px -2px 10px #2c3136,
-    inset 2px 2px 3px #33353B,
-    inset -2px -2px 3px #151618;
+    8px 8px 12px var(--box-shadow-color08),
+    -2px -2px 10px var(--box-shadow-color09),
+    inset 2px 2px 3px var(--box-shadow-color03),
+    inset -2px -2px 3px var(--box-shadow-color08);
 
   --box-shadow06:
-    10px 10px 12px #171718,
-    -10px -10px 12px #252A2F,
-    inset 4px 4px 8px #33353B,
-    inset -4px -4px 8px#1D1F23;
+    10px 10px 12px var(--box-shadow-color07),
+    -10px -10px 12px var(--box-shadow-color06),
+    inset 4px 4px 8px var(--box-shadow-color03),
+    inset -4px -4px 8px var(--box-shadow-color04);
 
   --box-shadow07:
-    10px 10px 12px #171718,
-    -10px -10px 12px #252A2F,
-    inset -4px -4px 8px #33353B,
-    inset 4px 4px 8px #1D1F23;
+    10px 10px 12px var(--box-shadow-color07),
+    -10px -10px 12px var(--box-shadow-color06),
+    inset -4px -4px 8px var(--box-shadow-color03),
+    inset 4px 4px 8px var(--box-shadow-color04);
 
   /*========== Font and typography ==========*/
 
@@ -176,7 +190,7 @@ i {
 .wrapper-border {
   overflow: hidden;
   position: relative;
-  background: linear-gradient(to bottom, #434952, #24272a);
+  background: var(--wrapper-border-bg);
   padding: 2px;
   border-radius: 3.2rem;
   display: grid;
@@ -240,7 +254,7 @@ img {
   height: 15rem;
   border-radius: 50%;
   position: relative;
-  background: linear-gradient(to bottom right, #272c30, #141415);
+  background: var(--image-border-bg);
   margin-bottom: var(--m-2-5);
   padding: 5px;
   overflow: hidden;
@@ -312,7 +326,7 @@ img {
   width: 0%;
   position: relative;
   border-radius: inherit;
-  background: linear-gradient(90deg, #bf2311 0%, #e1530a 80%);
+  background: linear-gradient(90deg, var(--bg06) 0%, var(--bg05) 80%);
 }
 
 .progress-bar::before {
@@ -377,7 +391,7 @@ img {
 
 .controls i {
   font-size: var(--h2-font-size);
-  color: var(--text-color-light);
+  color: var(--text-color);
   user-select: none;
   transition: all 0.2s ease;
 }
@@ -393,20 +407,20 @@ img {
 
 .play-pause {
   border: 3px solid var(--border03);
-  background: linear-gradient(135deg, #bd2210, #e5550b);
+  background: linear-gradient(135deg, var(--border03), var(--border04));
   box-shadow:
-    10px 10px 12px #151618,
-    -10px -10px 12px #2c3136,
-    inset 4px 4px 8px #e5550b,
-    inset -4px -4px 8px #bd2210;
+    10px 10px 12px var(--box-shadow-color08),
+    -10px -10px 12px var(--box-shadow-color09),
+    inset 4px 4px 8px var(--border04),
+    inset -4px -4px 8px var(--border03);
 }
 
 .play-pause:active {
   box-shadow:
-    10px 10px 12px #151618,
-    -10px -10px 12px #2c3136,
-    inset -10px 10px 12px #e5550b,
-    inset 10px 10px 8px #bd2210;
+    10px 10px 12px var(--box-shadow-color08),
+    -10px -10px 12px var(--box-shadow-color09),
+    inset -10px 10px 12px var(--border04),
+    inset 10px 10px 8px var(--border03);
 }
 
 
@@ -532,3 +546,80 @@ img {
 /* For large devices */
 
 /*=============== THEMES ===============*/
+
+:root {
+  .light-theme {
+    /*========== Colors ==========*/
+    --body-color: #D3E1F7;
+    --player-color: linear-gradient(180deg, #DFE9FD 0%, #ECF4FD 100%);
+    --image-border-bg: linear-gradient(to bottom right, #E4EDFE, #B9C7D8);
+    --wrapper-border-bg: linear-gradient(to bottom, #E6EEFD, #DAE6F3);
+    --bg02: linear-gradient(135deg, var(--box-shadow-color09), var(--box-shadow-color04));
+    --bg03: linear-gradient(135deg, var(--box-shadow-color09), var(--box-shadow-color04));
+    --bg04: #E4EDFA;
+    --bg05: rgb(180, 200, 234);
+    --bg06: #779DFF;
+    --text-color-light: #6C7A92;
+    --text-color: #A3B2CB;
+    --text-color-dark: #9FAEC3;
+    --text-color-white: hsl(0, 0%, 100%);
+
+    /*========== Borders ==========*/
+    --border01: #DAE3F1;
+    --border02: #DAE2F0;
+    --border03: #738EF5;
+    --border04: #547CFF;
+
+    /*========== Box Shadow ==========*/
+
+    --box-shadow-color01: #B6C5DC;
+    --box-shadow-color02: #F5FEFF;
+    --box-shadow-color03: #EDF9FF;
+    --box-shadow-color04: #DEE7F5;
+    --box-shadow-color05: #F1FBFF;
+    --box-shadow-color06: #F1FBFF;
+    --box-shadow-color07: #C7D4E7;
+    --box-shadow-color08: #C7D4E7;
+    --box-shadow-color09: #EDF9FF;
+
+
+    --box-shadow01:
+      6px 6px 10px var(--box-shadow-color01),
+      -6px -6px 10px var(--box-shadow-color02),
+      inset 2px 2px 6px var(--box-shadow-color03),
+      inset -3px -3px 6px var(--box-shadow-color04);
+
+    --box-shadow02:
+      6px 6px 10px var(--box-shadow-color01),
+      -6px -6px 10px var(--box-shadow-color02),
+      inset -4px -4px 8px var(--box-shadow-color03),
+      inset 4px 4px 8px var(--box-shadow-color04);
+
+    --box-shadow03:
+      10px 10px 20px var(--box-shadow-color05),
+      -10px -10px 20px var(--box-shadow-color02);
+
+    --box-shadow04:
+      inset 7px 5px 3px -2px hsl(210deg 49.37% 84.31% / 66%),
+      inset 0px -1px 1px 0px hsl(210deg 32.08% 78.66%);
+
+    --box-shadow05:
+      8px 8px 12px var(--box-shadow-color08),
+      -2px -2px 10px var(--box-shadow-color09),
+      inset 2px 2px 3px var(--box-shadow-color03),
+      inset -2px -2px 3px var(--box-shadow-color08);
+
+    --box-shadow06:
+      10px 10px 12px var(--box-shadow-color07),
+      -10px -10px 12px var(--box-shadow-color06),
+      inset 4px 4px 8px var(--box-shadow-color03),
+      inset -4px -4px 8px var(--box-shadow-color04);
+
+    --box-shadow07:
+      10px 10px 12px var(--box-shadow-color07),
+      -10px -10px 12px var(--box-shadow-color06),
+      inset -4px -4px 8px var(--box-shadow-color03),
+      inset 4px 4px 8px var(--box-shadow-color04);
+
+  }
+}
