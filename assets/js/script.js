@@ -6,11 +6,11 @@ const wrapper = document.querySelector(".wrapper"),
   prevBtn = wrapper.querySelector("#prev"),
   nextBtn = wrapper.querySelector("#next"),
   mainAudio = wrapper.querySelector("#main-audio"),
-  progressArea = wrapper.querySelector(".progress-area"),
-  progressBar = wrapper.querySelector(".progress-bar"),
+  progressArea = wrapper.querySelector(".progress__area"),
+  progressBar = wrapper.querySelector(".progress__bar"),
   currentTime = wrapper.querySelector(".current-time"),
   maxDuration = wrapper.querySelector(".max-duration"),
-  musicList = wrapper.querySelector(".music-list"),
+  musicList = wrapper.querySelector(".music__list"),
   moreMusicBtn = wrapper.querySelector("#more-music"),
   closemoreMusicBtn = document.querySelector("#close");
 
@@ -153,7 +153,7 @@ document.addEventListener("mouseup", function () {
 });
 
 function updateProgress(e) {
-  const progressArea = document.querySelector(".progress-area");
+  const progressArea = document.querySelector(".progress__area");
   const newPosition = e.clientX - progressArea.getBoundingClientRect().left;
   const progressPercentage = (newPosition / progressArea.clientWidth) * 100;
 
@@ -181,7 +181,7 @@ document.addEventListener("touchend", function () {
 });
 
 function updateProgressMobile(e) {
-  const progressArea = document.querySelector(".progress-area");
+  const progressArea = document.querySelector(".progress__area");
   const newPosition = e.touches[0].clientX - progressArea.getBoundingClientRect().left;
   const progressPercentage = (newPosition / progressArea.clientWidth) * 100;
 

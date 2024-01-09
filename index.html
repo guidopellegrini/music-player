@@ -18,19 +18,19 @@
 </head>
 
 <body>
-  <div class="wrapper-border">
+  <div class="wrapper__border">
     <div class="wrapper">
       <header class="header flex-space-between">
 
         <!--=============== THEME ===============-->
-        <button class="hdbtn theme-button"
+        <button class="header__button theme-button"
                 id="theme-button">
           <i id="theme-button__icon"
              class="fi fi-sr-moon"></i>
         </button>
 
         <h3 class="p-now">Playing now</h3>
-        <button class="hdbtn more-music"
+        <button class="header__button more-music"
                 id="more-music">
           <i class="fi fi-sr-list-music"></i>
         </button>
@@ -38,25 +38,25 @@
 
       <div class="player">
         <div class="player__song">
-          <div class="img-area">
-            <div class="img-border">
+          <div class="img__area">
+            <div class="img__border">
               <img src="assets/images/music-1.jpg"
                    alt="">
             </div>
           </div>
 
-          <div class="song-details">
+          <div class="song__details">
             <h1 class="name">Loading</h1>
             <h3 class="artist">Songs..</h3>
           </div>
         </div>
-        <div class="audioC">
-          <div class="song-timer flex-space-between">
+        <div class="audio__container">
+          <div class="song__timer flex-space-between">
             <span class="current-time">0:00</span>
             <span class="max-duration">0:00</span>
           </div>
-          <div class="progress-area">
-            <div class="progress-bar">
+          <div class="progress__area">
+            <div class="progress__bar">
               <audio id="main-audio"
                      src="assets/songs/music-1.mp3"></audio>
             </div>
@@ -64,23 +64,23 @@
         </div>
 
         <div class="controls flex-space-between">
-          <button class="btnC"
+          <button class="button__control"
                   id="prev">
             <i class="fi fi-sr-rewind"></i>
           </button>
-          <button class="btnC play-pause"
-                  id="btnC">
+          <button class="button__control play-pause"
+                  id="button__control">
             <i class="fi fi-sr-play"></i>
           </button>
-          <button class="btnC"
+          <button class="button__control"
                   id="next">
             <i class="fi fi-sr-forward"></i>
           </button>
         </div>
 
-        <div class="music-list flex-space-between">
+        <div class="music__list flex-space-between">
           <div class="header">
-            <button class="hdbtn close"
+            <button class="header__button close"
                     id="close">
               <i class="fi fi-sr-cross"></i>
             </button>
@@ -93,7 +93,7 @@
       </div>
     </div>
   </div>
-  <script src="assets/js/music-list.js"></script>
+  <script src="assets/js/music__list.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 
