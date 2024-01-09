@@ -8,7 +8,9 @@
   --body-color: hsl(216deg 6.17% 15.88%);
   --player-color: linear-gradient(180deg, hsl(213, 10%, 23%) 0%, hsl(216, 9%, 10%) 100%);
   --image-border-bg: linear-gradient(to bottom right, hsl(207, 10%, 17%), hsl(240, 2%, 8%));
-  --wrapper-border-bg: linear-gradient(to bottom, hsl(216, 10%, 29%), hsl(210, 8%, 15%));
+  --wrapper-border-bg: linear-gradient(to bottom, hsl(216, 10%, 29%), hsl(210, 19%, 27%));
+  --list-hover-bg: linear-gradient(143deg, hsla(225, 10%, 8%, 0.433), #47464b26);
+  --bg01: hsl(216, 9%, 10%);
   --bg02: linear-gradient(135deg, var(--box-shadow-color09), var(--box-shadow-color04));
   --bg03: linear-gradient(135deg, var(--box-shadow-color09), var(--box-shadow-color04));
   --bg04: hsl(0, 0%, 2%);
@@ -542,8 +544,88 @@ img {
   }
 }
 
+/*=============== MUSIC LIST ===============*/
 
-/* For large devices */
+.music-list {
+  position: absolute;
+  background: var(--player-color);
+  width: 100%;
+  left: 0;
+  height: 100%;
+  border-radius: 0px;
+  bottom: -100%;
+  pointer-events: none;
+  z-index: 5;
+  padding: 1rem;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-out;
+}
+
+.music-list .header {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.music-list.show {
+  bottom: 0;
+  pointer-events: auto;
+}
+
+.row,
+button {
+  cursor: pointer;
+}
+
+.music-list .row p {
+  font-size: var(--normal-font-size);
+  color: var(--text-color-dark);
+}
+
+.music-list .row {
+  width: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.music-list .row span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 95%;
+}
+
+.music-list ul {
+  width: 100%;
+  max-height: 66vh;
+  margin-top: 3rem;
+  overflow: auto;
+}
+
+
+
+.music-list ul li:hover {
+  background: var(--list-hover-bg);
+}
+
+.music-list ul li {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  cursor: pointer;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: left;
+  color: var(--lightblack);
+}
+
+.music-list ul::-webkit-scrollbar {
+  width: 0px;
+}
 
 /*=============== THEMES ===============*/
 
@@ -556,6 +638,8 @@ img {
     --wrapper-border-bg: linear-gradient(to bottom, #E6EEFD, #DAE6F3);
     --bg02: linear-gradient(135deg, var(--box-shadow-color09), var(--box-shadow-color04));
     --bg03: linear-gradient(135deg, var(--box-shadow-color09), var(--box-shadow-color04));
+    --list-hover-bg: linear-gradient(143deg, hsla(0, 0%, 100%, 0.53), #9ba4bd24);
+    --bg01: #ECF4FD;
     --bg04: #E4EDFA;
     --bg05: rgb(180, 200, 234);
     --bg06: #779DFF;

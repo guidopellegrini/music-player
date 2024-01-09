@@ -9,7 +9,10 @@ const wrapper = document.querySelector(".wrapper"),
   progressArea = wrapper.querySelector(".progress-area"),
   progressBar = wrapper.querySelector(".progress-bar"),
   currentTime = wrapper.querySelector(".current-time"),
-  maxDuration = wrapper.querySelector(".max-duration");
+  maxDuration = wrapper.querySelector(".max-duration"),
+  musicList = wrapper.querySelector(".music-list"),
+  moreMusicBtn = wrapper.querySelector("#more-music"),
+  closemoreMusicBtn = document.querySelector("#close");
 
 //Definimos el indice de una cancion aleatoria
 let musicIndex = Math.floor(Math.random() * allMusic.length + 1);
@@ -251,3 +254,61 @@ function changeTheme() {
 }
 
 changeTheme();
+
+//-------------------------------------------------------------
+//Mostrar más canciones
+
+moreMusicBtn.addEventListener("click", () => {
+  musicList.classList.toggle("show");
+});
+
+closemoreMusicBtn.addEventListener("click", () => {
+  moreMusicBtn.click();
+});
+
+//-------------------------------------------------------------
+//Cargar canciones de la lista
+
+const ulTag = wrapper.querySelector("ul");
+
+//Vamos a crear li tags según la cantidad de canciones
+for (let i = 0; i < allMusic.length; i++) {
+  //Ahora vamos a pasar el nombre de la canción, el artista y la duración de la canción
+  let liTag = `<li li-index="${i + 1}">
+                <div class="row">
+                  <span>${allMusic[i].name}</span>
+                  <p>${allMusic[i].artist}</p>
+                </div>
+                <span id="${allMusic[i].src}" class="audio-duration">0:00</span>
+                <audio class="${allMusic[i].src}" src="assets/songs/${allMusic[i].src}.mp3"></audio>
+              </li>`;
+
+  ulTag.insertAdjacentHTML("beforeend", liTag); //insertamos el li tag dentro del ul tag
+
+  //Ahora vamos a pasar la duración de la canción en el tag span
+  let liAudioDuartionTag = ulTag.querySelector(`#${allMusic[i].src}`);
+  let liAudioTag = ulTag.querySelector(`.${allMusic[i].src}`);
+
+  liAudioTag.addEventListener("loadeddata", () => {
+    let duration = liAudioTag.duration;
+    let totalMin = Math.floor(duration / 60);
+    let totalSec = Math.floor(duration % 60);
+    if (totalSec < 10) {
+      //si los segundos son menores a 10, entonces agregamos un 0 al inicio
+      totalSec = `0${totalSec}`;
+    }
+    liAudioDuartionTag.innerText = `${totalMin}:${totalSec}`; //pasamos la duración de la canción en el tag span
+
+    //Agregamos un evento click a la row para reproducir la cancion
+    ulTag.querySelector(`li[li-index="${i + 1}"] .row`).addEventListener("click", () => {
+      musicIndex = i + 1;
+      loadMusic(musicIndex);
+      playMusic();
+
+      //Cierro el menu de más canciones
+      setTimeout(() => {
+        moreMusicBtn.click();
+      }, 200);
+    });
+  });
+}

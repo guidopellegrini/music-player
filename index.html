@@ -11,10 +11,14 @@
 
   <link rel="stylesheet"
         href="assets/css/styles.css">
+  <!-- favicon -->
+  <link rel="shortcut icon"
+        href="assets/images/favicon.png"
+        type="image/x-icon">
+
 </head>
 
 <body>
-
 
   <div class="wrapper-border">
     <div class="wrapper">
@@ -28,8 +32,9 @@
         </button>
 
         <h3 class="p-now">Playing now</h3>
-        <button class="hdbtn">
-          <i class="fi fi-sr-list"></i>
+        <button class="hdbtn more-music"
+                id="more-music">
+          <i class="fi fi-sr-list-music"></i>
         </button>
       </header>
 
@@ -73,6 +78,18 @@
                   id="next">
             <i class="fi fi-sr-forward"></i>
           </button>
+        </div>
+
+        <div class="music-list flex-space-between">
+          <div class="header">
+            <button class="hdbtn close"
+                    id="close">
+              <i class="fi fi-sr-cross"></i>
+            </button>
+          </div>
+          <ul>
+            <!-- aca insertamos con js las canciones -->
+          </ul>
         </div>
 
       </div>
