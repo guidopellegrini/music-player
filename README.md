@@ -12,7 +12,7 @@ Welcome to the Responsive Music Player, a fictional and innovative product that 
 
 ## Live
 
-https://guidopellegrini.github.io/music-player/
+https://guidopellegrini.github.io/responsive-music-player/
 
 ## Preview
 
