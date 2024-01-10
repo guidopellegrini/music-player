@@ -435,119 +435,6 @@ img {
   transition: opacity 0.3s ease-in-out;
 }
 
-/*=============== MEDIA QUERIES ===============*/
-
-/* For small devices */
-@media screen and (max-width: 400px) {
-
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    border-radius: 0;
-    min-width: 100vw;
-    width: 100vw;
-    min-height: 100vh;
-    height: 100vh;
-    padding: var(--p-1)
-  }
-
-  .wrapper__border {
-    border-radius: 0;
-  }
-
-  .player {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100%;
-  }
-
-  img {
-    width: 11rem;
-    height: 11rem;
-  }
-
-  .img__border {
-    width: 12rem;
-    height: 12rem;
-  }
-
-  .button__control {
-    width: 3rem;
-    height: 3rem;
-  }
-
-  .audio__container {
-    margin-inline: 1rem;
-  }
-
-  .controls {
-    margin-bottom: 3rem;
-  }
-}
-
-/* For medium devices */
-
-@media screen and (min-width: 400px) and (max-width: 1200px) {
-  .wrapper {
-    height: calc(var(--vh, 1vh) * 90);
-    max-height: calc(var(--vh, 1vh) * 90);
-    min-width: 90vw;
-    display: flex;
-    flex-direction: column;
-  }
-
-  img {
-    width: 11rem;
-    height: 11rem;
-  }
-
-  .img__border {
-    width: 12rem;
-    height: 12rem;
-    margin-bottom: 0;
-  }
-
-  .player__song {
-    display: grid;
-    grid-template-columns: 14rem max-content;
-    overflow: hidden;
-  }
-
-  .player {
-    margin-top: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  .player__song {
-    width: 100%;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .song__details {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-  }
-
-  .audio__container {
-    margin-top: 0;
-  }
-}
-
 /*=============== MUSIC LIST ===============*/
 
 .music__list {
@@ -627,6 +514,125 @@ button {
 
 .music__list ul::-webkit-scrollbar {
   width: 0px;
+}
+
+
+/*=============== MEDIA QUERIES ===============*/
+
+/* For small devices */
+@media screen and (max-width: 400px) {
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    min-width: 100vw;
+    width: 100vw;
+    min-height: 100vh;
+    height: 100vh;
+    padding: var(--p-1)
+  }
+
+  .wrapper__border {
+    border-radius: 0;
+  }
+
+  .player {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+
+  img {
+    width: 11rem;
+    height: 11rem;
+  }
+
+  .img__border {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .button__control {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .audio__container {
+    margin-inline: 1rem;
+  }
+
+  .controls {
+    margin-bottom: 3rem;
+  }
+
+  .music__list .header {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+/* For medium devices */
+
+@media screen and (min-width: 400px) and (max-width: 1200px) {
+  .wrapper {
+    height: calc(var(--vh, 1vh) * 90);
+    max-height: calc(var(--vh, 1vh) * 90);
+    min-width: 90vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  img {
+    width: 11rem;
+    height: 11rem;
+  }
+
+  .img__border {
+    width: 12rem;
+    height: 12rem;
+    margin-bottom: 0;
+  }
+
+  .player__song {
+    display: grid;
+    grid-template-columns: 14rem max-content;
+    overflow: hidden;
+  }
+
+  .player {
+    margin-top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .player__song {
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .song__details {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .audio__container {
+    margin-top: 0;
+  }
 }
 
 /*=============== THEMES ===============*/
